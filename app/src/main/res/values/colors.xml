@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@color/ingenicoBlue</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">@color/ingenicoTurquoise</color>
+    <color name="colorPrimaryDark">@color/ingenicoBlue</color>
     <color name="colorAccent">#D81B60</color>
     <color name="ingenicoLightRed">#ef4036</color>
     <color name="ingenicoDarkGrey">#575665</color>
