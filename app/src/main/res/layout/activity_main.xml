@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ingenicoTurquoise"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/add_money_button"
+        android:background="@drawable/custom_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -24,6 +26,7 @@
 
     <Button
         android:id="@+id/pay_button"
+        android:background="@drawable/custom_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -40,6 +43,7 @@
 
     <Button
         android:id="@+id/receive_funds_button"
+        android:background="@drawable/custom_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -82,6 +86,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="@string/welcome_user_string"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/nfc_status_switch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
