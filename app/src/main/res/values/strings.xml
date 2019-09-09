@@ -5,6 +5,7 @@
     <string name="nfc_status_disabled">OFF</string>
     <string name="nfc_status_enabled">ON</string>
     <string name="add_money_string">Add Money</string>
+    <string name="enable_nfc">Enable/Disable NFC</string>
     <string name="pay_button_string">Pay</string>
     <string name="receive_funds_button_string">Receive Funds</string>
 </resources>
