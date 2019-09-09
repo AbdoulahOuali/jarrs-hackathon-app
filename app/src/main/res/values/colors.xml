@@ -9,4 +9,5 @@
     <color name="ingenicoBlue">#003399</color>
     <color name="ingenicoRed">#E31C18</color>
     <color name="ingenicoTurquoise">#00CCCC</color>
+    <color name="backGroundWhite">#FAFAFA</color>
 </resources>
