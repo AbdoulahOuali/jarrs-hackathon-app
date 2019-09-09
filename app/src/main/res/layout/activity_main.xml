@@ -8,8 +8,6 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backGroundWhite"
@@ -76,8 +74,6 @@
         android:layout_marginBottom="38dp"
         android:drawableStart="@drawable/ic_nfc_black_16dp"
         android:text="@string/nfc_status"
-        android:textOff="@string/nfc_status_disabled"
-        android:textOn="@string/nfc_status_enabled"
         app:layout_constraintBottom_toTopOf="@+id/add_money_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

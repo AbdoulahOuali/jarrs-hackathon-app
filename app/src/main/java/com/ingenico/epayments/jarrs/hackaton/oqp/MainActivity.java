@@ -1,9 +1,11 @@
 package com.ingenico.epayments.jarrs.hackaton.oqp;
 
+import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,10 +24,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final Button addMoneyButton = findViewById(R.id.add_money_button);
         final Button payButton = findViewById(R.id.pay_button);
         final Button receiveFundsButton = findViewById(R.id.receive_funds_button);
+        final Switch nfcSwitch = findViewById(R.id.nfc_status_switch);
 
+        NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        if (nfcAdapter == null) {
+            Toast.makeText(this, "No NFC", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        } else if (nfcAdapter.isEnabled()) {
+            nfcSwitch.setChecked(true);
+        } else {
+            nfcSwitch.setChecked(false);
+        }
+
+//        checkNfcStatus();
         addMoneyButton.setOnClickListener(this);
         payButton.setOnClickListener(this);
         receiveFundsButton.setOnClickListener(this);
+    }
+
+    private void checkNfcStatus(View view) {
+        // TODO
     }
 
     @Override
