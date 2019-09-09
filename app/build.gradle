@@ -32,4 +32,9 @@ dependencies {
     // add library for money textview
     // https://mvnrepository.com/artifact/org.fabiomsr/moneytextview
     implementation group: 'org.fabiomsr', name: 'moneytextview', version: '1.1.0'
+
+    // easy splash screen
+    // https://mvnrepository.com/artifact/gr.pantrif/easy-android-splash-screen
+    implementation group: 'gr.pantrif', name: 'easy-android-splash-screen', version: '0.0.1'
+
 }
