@@ -66,15 +66,16 @@
 
         <Switch
             android:id="@+id/nfc_status_switch"
-            android:contentDescription="@string/enable_nfc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="38dp"
+            android:backgroundTint="@color/ingenicoTurquoise"
+            android:contentDescription="@string/enable_nfc"
             android:drawableStart="@drawable/ic_nfc_black_16dp"
             android:text="@string/nfc_status"
-            android:backgroundTint="@color/ingenicoTurquoise"
+            android:thumbTint="@color/colorPrimaryDark"
             app:layout_constraintBottom_toTopOf="@+id/add_money_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
