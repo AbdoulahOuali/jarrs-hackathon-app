@@ -8,12 +8,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.fabiomsr.moneytextview.MoneyTextView;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final MoneyTextView moneyTextView = findViewById(R.id.money_user_textView);
 
         final Button addMoneyButton = findViewById(R.id.add_money_button);
         final Button payButton = findViewById(R.id.pay_button);

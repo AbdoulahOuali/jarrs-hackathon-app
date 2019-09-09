@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,67 +17,63 @@
 
     <Button
         android:id="@+id/add_money_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="38dp"
         android:background="@drawable/custom_button"
+        android:fontFamily="sans-serif-black"
         android:text="@string/add_money_string"
         android:textColor="@color/backGroundWhite"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/pay_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nfc_status_switch" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+
+        <Button
         android:id="@+id/pay_button"
-        android:layout_width="wrap_content"
+            android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="39dp"
         android:background="@drawable/custom_button"
+            android:fontFamily="sans-serif-black"
         android:text="@string/pay_button_string"
         android:textColor="@color/backGroundWhite"
+            android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/receive_funds_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_money_button" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/receive_funds_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/custom_button"
+        android:fontFamily="sans-serif-black"
         android:text="@string/receive_funds_button_string"
         android:textColor="@color/backGroundWhite"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pay_button" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
         android:id="@+id/nfc_status_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="38dp"
         android:drawableStart="@drawable/ic_nfc_black_16dp"
         android:text="@string/nfc_status"
         android:textOff="@string/nfc_status_disabled"
@@ -77,23 +81,49 @@
         app:layout_constraintBottom_toTopOf="@+id/add_money_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_user_home_textView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/welcome_user_home_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="38dp"
+        android:fontFamily="sans-serif-black"
         android:text="@string/welcome_user_string"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/nfc_status_switch"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/money_user_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+        <org.fabiomsr.moneytextview.MoneyTextView
+            android:id="@+id/money_user_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="38dp"
+            app:amount="0.00"
+            app:baseTextColor="@color/ingenicoTurquoise"
+            app:baseTextSize="54sp"
+            app:decimalDigitsTextSize="30sp"
+            app:decimalGravity="bottom"
+            app:decimalMargin="6dp"
+            app:decimalSeparator=","
+            app:includeDecimalSeparator="true"
+            app:layout_constraintBottom_toTopOf="@+id/nfc_status_switch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:symbol="\u20AC"
+            app:symbolGravity="start|top"
+            app:symbolMargin="6dp"
+            app:symbolTextSize="30sp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
