@@ -14,6 +14,8 @@ import org.fabiomsr.moneytextview.MoneyTextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    NfcAdapter nfcAdpt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         addMoneyButton.setOnClickListener(this);
         payButton.setOnClickListener(this);
         receiveFundsButton.setOnClickListener(this);
+
+        nfcAdpt = NfcAdapter.getDefaultAdapter(this);
+        // Check if the smartphone has NFC
+        if (nfcAdpt == null) {
+            Toast noNfc = Toast.makeText(this, "NFC not supported", Toast.LENGTH_LONG);
+            noNfc.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 24);
+            noNfc.show();
+            finish();
+        }
+        // Check if NFC is enabled
+        if (!nfcAdpt.isEnabled()) {
+            Toast toastNfc = Toast.makeText(this, "Enable NFC before using the app", Toast.LENGTH_LONG);
+            toastNfc.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 24);
+            toastNfc.show();
+
+
+        }
     }
 
     private void checkNfcStatus(View view) {

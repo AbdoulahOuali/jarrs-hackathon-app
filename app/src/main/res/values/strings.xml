@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">OQP</string>
+    <string name="app_name">NOP</string>
     <string name="welcome_user_string">Welcome, Abdoulah Ouali</string>
     <string name="nfc_status">NFC: </string>
     <string name="nfc_status_disabled">OFF</string>
