@@ -18,7 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 .withFullScreen()
                 .withTargetActivity(MainActivity.class)
                 .withSplashTimeOut(5000)
-                .withHeaderText("Seemless Offline Payments")
+                .withHeaderText("NFC-based Offline Payments")
                 .withFooterText("JARRS Hackaton team 2019" + "\u00A9")
                 .withBeforeLogoText("Powered by")
                 .withAfterLogoText("Shaping the Future of Payments")
