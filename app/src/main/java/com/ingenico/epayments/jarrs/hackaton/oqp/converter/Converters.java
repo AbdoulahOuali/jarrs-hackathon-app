@@ -4,6 +4,9 @@ import androidx.room.TypeConverter;
 
 import java.math.BigDecimal;
 
+/**
+ * Convertors for saving and retrieving complex fields into Room database
+ */
 public class Converters {
 
     @TypeConverter
