@@ -11,6 +11,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         description "Payment app for offline payments using NFC. Created by the JARRS hackaton theme"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -36,13 +41,13 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // add library for money textview
-    // https://mvnrepository.com/artifact/org.fabiomsr/moneytextview
-    implementation group: 'org.fabiomsr', name: 'moneytextview', version: '1.1.0'
-
     // easy splash screen
     // https://mvnrepository.com/artifact/gr.pantrif/easy-android-splash-screen
     implementation group: 'gr.pantrif', name: 'easy-android-splash-screen', version: '0.0.1'
+
+    // add library for money textview
+    // https://mvnrepository.com/artifact/org.fabiomsr/moneytextview
+    implementation group: 'org.fabiomsr', name: 'moneytextview', version: '1.1.0'
 
     // Lombok
     compileOnly 'org.projectlombok:lombok:1.18.10'
@@ -62,4 +67,7 @@ dependencies {
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // https://mvnrepository.com/artifact/org.threeten/threetenbp
+    implementation group: 'org.threeten', name: 'threetenbp', version: '1.4.0'
 }

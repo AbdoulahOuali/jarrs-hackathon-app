@@ -8,4 +8,18 @@
     <string name="enable_nfc">Enable/Disable NFC</string>
     <string name="pay_button_string">Pay</string>
     <string name="receive_funds_button_string">Receive Funds</string>
+    <string name="title_registration_activity">Create an account</string>
+    <string name="title_splash_screen">Welcome</string>
+    <string name="title_home_screen">home</string>
+    <string name="submit_registration_button">Register</string>
+    <string name="login">Login</string>
+    <string name="last_name_hint">Last name</string>
+    <string name="first_name_hint">First name</string>
+    <string name="enter_user_name_hint">Enter User Name</string>
+    <string name="enter_e_mail_address_hint">Enter E-mail address</string>
+    <string name="enter_password_hint">Enter password</string>
+    <string name="re_enter_password_hint">Re-enter password</string>
+    <string name="already_a_member_string">Already a member?</string>
+    <string name="title_login_activity">Log in</string>
+    <string name="no_account_string">No account?</string>
 </resources>

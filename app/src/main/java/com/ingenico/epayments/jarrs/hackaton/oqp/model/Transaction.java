@@ -5,13 +5,14 @@ import androidx.annotation.Size;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import org.threeten.bp.OffsetDateTime;
+
 import java.math.BigDecimal;
-import java.time.LocalTime;
 
 import lombok.Data;
 
 @Data
-@Entity(tableName = "transaction_table")
+@Entity(tableName = "transactions")
 public class Transaction {
 
     @PrimaryKey
@@ -29,7 +30,7 @@ public class Transaction {
     private String receiver;
 
     @NonNull
-    private LocalTime transactionTime;
+    private OffsetDateTime transactionTime;
 
     @NonNull
     private BigDecimal amount;
@@ -38,7 +39,7 @@ public class Transaction {
     @Size(min = 3, max = 3)
     private String currency;
 
-    private LocalTime senderUpdateTime;
+    private OffsetDateTime senderUpdateTime;
 
-    private LocalTime receiverUpdateTime;
+    private OffsetDateTime receiverUpdateTime;
 }

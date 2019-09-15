@@ -1,4 +1,4 @@
-package com.ingenico.epayments.jarrs.hackaton.oqp;
+package com.ingenico.epayments.jarrs.hackaton.oqp.activity;
 
 import android.os.Bundle;
 import android.view.Gravity;
@@ -6,9 +6,12 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ingenico.epayments.jarrs.hackaton.oqp.R;
+
 import gr.net.maroulis.library.EasySplashScreen;
 
 public class SplashScreenActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         EasySplashScreen configSplash = new EasySplashScreen(SplashScreenActivity.this)
                 .withFullScreen()
                 .withTargetActivity(MainActivity.class)
-                .withSplashTimeOut(4500)
+                .withSplashTimeOut(3500)
                 .withHeaderText("NFC-based Offline Payments")
                 .withFooterText("JARRS Hackaton team 2019" + "\u00A9")
                 .withBeforeLogoText("Powered by")

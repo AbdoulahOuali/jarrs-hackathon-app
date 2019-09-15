@@ -1,4 +1,4 @@
-package com.ingenico.epayments.jarrs.hackaton.oqp;
+package com.ingenico.epayments.jarrs.hackaton.oqp.activity;
 
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.ingenico.epayments.jarrs.hackaton.oqp.R;
 
 import org.fabiomsr.moneytextview.MoneyTextView;
 

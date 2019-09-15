@@ -1,5 +1,6 @@
 package com.ingenico.epayments.jarrs.hackaton.oqp.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -22,6 +23,9 @@ public interface UserDao {
     @Delete
     void delete(User user);
 
-    @Query("SELECT * FROM user_table ORDER BY userId DESC")
+    @Query("SELECT * FROM users ORDER BY user_id DESC")
     List<User> getAllUsers();
+
+    @Query("SELECT * FROM users WHERE user_id =:usrId")
+    LiveData<User> getUserById(String usrId);
 }
