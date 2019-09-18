@@ -24,7 +24,7 @@ public class TransactionRepository {
         transactionDao = appDatabase.TransactionDao();
         userDao = appDatabase.userDao();
 
-//   TODO     allTransactions = transactionDao.getAllTransactionsForUser();
+//   TODO     allTransactions = transactionDao.getAllTransactionsForUser(); needs foreign key constraint
     }
 
     private void insert(final Transaction transaction) {

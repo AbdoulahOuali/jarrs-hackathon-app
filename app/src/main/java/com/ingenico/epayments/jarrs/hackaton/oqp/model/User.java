@@ -7,6 +7,8 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.math.BigDecimal;
 
 import lombok.Data;
@@ -20,6 +22,7 @@ public class User {
     private Long id;
 
     @NonNull
+    @SerializedName("userId")
     @ColumnInfo(name = "user_id")
     @Size(min = 1, max = 100)
     private String userId;

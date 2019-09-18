@@ -42,13 +42,13 @@
             android:text="@string/pay_button_string"
             android:textColor="@color/backGroundWhite"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/receive_funds_button"
+            app:layout_constraintBottom_toTopOf="@+id/show_transactions_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/receive_funds_button"
+            android:id="@+id/show_transactions_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -56,7 +56,7 @@
             android:layout_marginBottom="64dp"
             android:background="@drawable/custom_button"
             android:fontFamily="sans-serif-black"
-            android:text="@string/receive_funds_button_string"
+            android:text="@string/show_transactions_button_string"
             android:textColor="@color/backGroundWhite"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"

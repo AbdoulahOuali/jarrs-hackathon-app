@@ -1,5 +1,6 @@
 package com.ingenico.epayments.jarrs.hackaton.oqp.activity;
 
+import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         final Button addMoneyButton = findViewById(R.id.add_money_button);
         final Button payButton = findViewById(R.id.pay_button);
-        final Button receiveFundsButton = findViewById(R.id.receive_funds_button);
+        final Button receiveFundsButton = findViewById(R.id.show_transactions_button);
         final Switch nfcSwitch = findViewById(R.id.nfc_status_switch);
 
         NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -77,12 +78,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 toastMoneyAdded.show();
                 break;
             case R.id.pay_button:
+                Intent intent = new Intent(this, NFCSenderActivity.class);
+                startActivity(intent);
                 Toast toastPayed = Toast.makeText(this, "YOUR PAYMENT WAS SUCCESSFUL", Toast.LENGTH_LONG);
                 toastPayed.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 24);
                 toastPayed.show();
                 break;
-            case R.id.receive_funds_button:
-                Toast toastFundsReceived = Toast.makeText(this, "FUNDS RECEIVED", Toast.LENGTH_LONG);
+            case R.id.show_transactions_button:
+//                Intent intent = new Intent(this,ShowTransactionActivity.class);
+//                startActivity(intent);
+                Toast toastFundsReceived = Toast.makeText(this, "TRANSACTIONS", Toast.LENGTH_LONG);
                 toastFundsReceived.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL, 0, 24);
                 toastFundsReceived.show();
                 break;
